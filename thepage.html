@@ -1,52 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My HTML Project</title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Page with Grid and Flex</title>
+  <style>
+    /* Skip to Main Content Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+      text-decoration: none;
+    }
 
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Nav Styling */
+    nav {
+      display: inline-block;
+      width: 80%;
+      background-color: #ccc;
+      padding: 10px;
+    }
+
+    nav img {
+      width: 10%;
+    }
+
+    /* Commented li style */
+    /*
+    li {
+      list-style-type: none;
+      margin: 5px;
+    }
+    */
+
+    /* Grid layout */
+    .grid {
+      display: grid;
+      grid-template-columns: 40% 40%;
+      justify-content: space-around;
+      align-items: center;
+      row-gap: 20px;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+    }
+
+    /* Flex layout */
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #e0e0e0;
+      padding: 20px;
+    }
+
+    .flex div {
+      flex: 1 1 45%;
+      margin: 10px;
+      padding: 10px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.thepage.com">External Link</a></li>
-                <li><a href="#gallery">Image Gallery</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <main>
-        <section id="about">
-            <h2>About This Site</h2>
-            <p>This website is created as part of a project to demonstrate basic HTML structure.</p>
-        </section>
+  <header>
+    <h1>Welcome to the Sample Page</h1>
+  </header>
 
-        <section id="gallery">
-            <h2>Image Gallery</h2>
-            <img src="image1.jpg" alt="Description of image 1">
-            <img src="image2.jpg" alt="Description of image 2">
-            <img src="image3.jpg" alt="Description of image 3">
-        </section>
+  <nav>
+    <img src="https://via.placeholder.com/50" alt="Logo" />
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Parks</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-        <section>
-            <h2>My Favorite Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Traveling</li>
-                <li>Coding</li>
-            </ul>
-        </section>
-    </main>
+  <main id="main-content">
+    <section class="grid">
+      <img src="https://via.placeholder.com/150" alt="Grid image 1" />
+      <img src="https://via.placeholder.com/150" alt="Grid image 2" />
+    </section>
 
-    <footer>
-        <p>&copy; 2025 My Website. All Rights Reserved.</p>
-    </footer>
+    <section class="flex">
+      <div>Flex Box 1</div>
+      <div>Flex Box 2</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Website</p>
+  </footer>
 
 </body>
-
 </html>
